@@ -240,7 +240,9 @@ function formatQuizOptions(choices){
     let answerHTML = '';
     
     choices.forEach(function(value,index){
-        answerHTML +=`<label for="quiz_answer_${index}"><input type="radio" id="quiz_answer_${index}" name="quiz_answer" value="${value}" required> ${value}</label>`;
+        answerHTML +=`<label for="quiz_answer_${index}">
+        <input type="radio" id="quiz_answer_${index}" name="quiz_answer" value="${value}" required> ${value}
+        </label>`;
     });
 
     return answerHTML;
