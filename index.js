@@ -144,6 +144,8 @@ function checkQuizAnswer(){
     let answer = $("input[name='quiz_answer']:checked").val();
     let currentQuestion = STORE.questions[STORE.quizProgress];
 
+    $("input[name='quiz_answer']").attr('disabled', true);
+
     if( answer === currentQuestion.answer){
         handleCorrectAnswer();
     }else{
